@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seu Nome | Portfólio</title>
+  <meta name="description" content="Portfólio de Seu Nome: sobre mim, projetos e contato.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navegação principal">
+      <a href="#inicio" class="nav__logo">Allan Victor</a>
+
+      <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#inicio" class="nav__link">Início</a></li>
+        <li><a href="#projetos" class="nav__link">Projetos</a></li>
+        <li><a href="#contato" class="nav__link">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== 1. INÍCIO ===== -->
+    <section id="inicio" class="hero container">
+      <div class="hero__text">
+        <p class="hero__hello">Olá, eu sou</p>
+        <h1>Seu Nome</h1>
+        <p class="hero__role">Desenvolvedor(a) web</p>
+        <p class="hero__summary">
+          Sou um estudante de Análise e Desenvolvimento de Sitemas e entusiasta de tecnologia.
+          Meu hobbys incluem videogames, animes e guitarra, e meu objetivo profissional é me tornar um desenvolvedor FullStack.
+        </p>
+        <div class="hero__actions">
+          <a href="#projetos" class="btn btn--primary">Ver projetos</a>
+          <a href="#contato" class="btn btn--ghost">Fale comigo</a>
+        </div>
+      </div>
+
+      <div class="hero__photo">
+        <div class="photo-frame">
+          <img src="images/foto-perfil.jpg" alt="Foto de Seu Nome" width="480" height="600">
+          <span class="photo-frame__hint">Adicione sua foto em<br><code>images/foto-perfil.jpg</code></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2. PROJETOS ===== -->
+    <section id="projetos" class="section">
+      <div class="container">
+        <h2 class="section__title">Projetos</h2>
+        <p class="section__intro">Alguns sites que eu desenvolvi. Clique em uma miniatura para visitar o projeto.</p>
+
+        <div class="projects">
+
+          <article class="project">
+            <a class="project__thumb" href="https://github.com/AllanV3667/Sistema-de-Login-com-PhP-e-JavaScript" target="_blank" rel="noopener noreferrer" aria-label="Abrir Projeto 1 em uma nova aba">
+              <img src="images/projeto-1.jpg" alt="Prévia do site Projeto 1" width="800" height="500" loading="lazy">
+              <span class="photo-frame__hint">Adicione a prévia em<br><code>images/projeto-1.jpg</code></span>
+            </a>
+            <div class="project__body">
+              <h3>Nome do projeto 1</h3>
+              <p>Esse projeto foi criado com a intenção de desenvolver minhas habilidades com PhP e um sistema de login com segurança.</p>
+              <a class="project__link" href="https://github.com/AllanV3667/Sistema-de-Login-com-PhP-e-JavaScript" target="_blank" rel="noopener noreferrer">Visitar site</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <a class="project__thumb" href="https://github.com/Machxd/Project-ERP" target="_blank" rel="noopener noreferrer" aria-label="Abrir Projeto 2 em uma nova aba">
+              <img src="images/projeto-2.jpg" alt="Prévia do site Projeto 2" width="800" height="500" loading="lazy">
+              <span class="photo-frame__hint">Adicione a prévia em<br><code>images/projeto-2.jpg</code></span>
+            </a>
+            <div class="project__body">
+              <h3>Nome do projeto 2</h3>
+              <p>Esse site é um projeto em grupo em que usamos principalmente Python para desenvolver, é um sistema de controle de mercadorias que indica validade e quantidade dos ítens.</p>
+              <a class="project__link" href="https://github.com/Machxd/Project-ERP" target="_blank" rel="noopener noreferrer">Visitar site</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. CONTATO ===== -->
+    <section id="contato" class="section section--contact">
+      <div class="container contact">
+        <div class="contact__text">
+          <h2 class="section__title">Contato</h2>
+          <p class="section__intro">Tem um projeto em mente ou quer conversar? Preencha o formulário e eu respondo assim que possível.</p>
+        </div>
+
+        <form class="form" id="contact-form" novalidate>
+          <div class="field">
+            <label for="email">E-mail de contato</label>
+            <input type="email" id="email" name="email" placeholder="voce@email.com" autocomplete="email" required>
+            <small class="field__error" id="email-error" role="alert"></small>
+          </div>
+
+          <div class="field">
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" autocomplete="tel" inputmode="tel" required>
+            <small class="field__error" id="telefone-error" role="alert"></small>
+          </div>
+
+          <div class="field">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem" required></textarea>
+            <small class="field__error" id="mensagem-error" role="alert"></small>
+          </div>
+
+          <button type="submit" class="btn btn--primary">Enviar mensagem</button>
+          <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== RODAPÉ ===== -->
+  <footer class="site-footer">
+    <div class="container footer">
+      <p>&copy; <span id="year">2026</span> Allan Victor Ramos. Todos os direitos reservados.</p>
+      <ul class="footer__links">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
